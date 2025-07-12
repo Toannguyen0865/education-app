@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { fetchSuggestions } from '../api';
 import { useNavigate } from 'react-router-dom';
-import './SuggestionsButton.css'; // CSS animation
+import './SuggestionsButton.css'; 
 
 const SuggestionsButton = ({ userId }) => {
   const [suggestions, setSuggestions] = useState([]);
@@ -33,7 +33,6 @@ const SuggestionsButton = ({ userId }) => {
         alignItems: 'flex-start',
       }}
     >
-      {/* Icon Button */}
       <button
         className="btn btn-primary rounded-circle p-3 shadow"
         title="Gợi ý sản phẩm phù hợp"
@@ -42,7 +41,6 @@ const SuggestionsButton = ({ userId }) => {
         <i className="fas fa-magic fs-4"></i>
       </button>
 
-      {/* Suggestion Box (above the button) */}
       <div className={`suggestion-box ${showList ? 'show' : 'hide'}`}>
         <strong className="d-block mb-2">Gợi ý cho bạn:</strong>
         {suggestions.length > 0 ? (

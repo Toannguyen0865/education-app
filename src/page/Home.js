@@ -2,8 +2,7 @@ import { useEffect } from 'react';
 import {useNavigate } from 'react-router-dom';
 import Carousel from 'react-bootstrap/Carousel';
 import ProductCard from '../components/ProductCard';
-// import SuggestionsButton from '../components/SuggestionsButton';
-import products from '../data';  // import data sản phẩm
+import products from '../data'; 
 
 const Home = () => {
   const navigate = useNavigate();

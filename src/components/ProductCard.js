@@ -30,7 +30,7 @@ const ProductCard = ({ product }) => {
     } else {
       updatedFavorites = [...storedFavorites, product];
       setAnimateLike(true);
-      setTimeout(() => setAnimateLike(false), 500); // reset animation
+      setTimeout(() => setAnimateLike(false), 500); 
     }
 
     localStorage.setItem('favorites', JSON.stringify(updatedFavorites));
@@ -39,14 +39,10 @@ const ProductCard = ({ product }) => {
 
   const handleViewDetail = (e) => {
     e.stopPropagation();
-    // Lấy lịch sử hiện tại
     const storedHistory = JSON.parse(localStorage.getItem('history')) || [];
-    // Thêm sản phẩm mới vào đầu, bỏ sản phẩm trùng nếu có
     const updatedHistory = [product, ...storedHistory.filter(p => p.id !== product.id)];
-    // Giới hạn lưu tối đa 20 sản phẩm
     localStorage.setItem('history', JSON.stringify(updatedHistory.slice(0, 20)));
 
-    // Điều hướng đến trang chi tiết
     navigate(`/product/${product.id}`);
   };
 

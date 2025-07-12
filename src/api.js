@@ -13,10 +13,9 @@ export function fetchSuggestions(userId) {
     ...history.map(p => p.id),
   ]);
 
-  // Lọc ra sản phẩm chưa xem/chưa thích, để đề xuất thêm
   const suggested = products.filter(p => !interactedIds.has(p.id));
 
-  // Giả lập delay và trả về tối đa 4 sản phẩm gợi ý
+
   return new Promise((resolve) => {
     setTimeout(() => {
       resolve(suggested.slice(0, 4));

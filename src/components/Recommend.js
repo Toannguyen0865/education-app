@@ -3,7 +3,6 @@ import ProductCard from '../components/ProductCard';
 import products from '../data';
 
 const Recommend = ({ onDetailClick }) => {
-  // Chọn ngẫu nhiên 4 sản phẩm khác nhau
   const shuffled = [...products].sort(() => 0.5 - Math.random());
   const recommended = shuffled.slice(0, 4);
   

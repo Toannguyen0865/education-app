@@ -6,7 +6,7 @@ const Header = () => {
   const [searchInput, setSearchInput] = useState('');
   const [suggestions, setSuggestions] = useState([]);
   const [showDropdown, setShowDropdown] = useState(false);
-  const [isCollapsed, setIsCollapsed] = useState(true); // NEW
+  const [isCollapsed, setIsCollapsed] = useState(true);
   const navigate = useNavigate();
   const inputRef = useRef(null);
   const suggestionRef = useRef(null);
@@ -52,12 +52,10 @@ const Header = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-primary position-relative z-3" style={{ minHeight: '70px' }}>
       <div className="container-fluid">
-        {/* Logo */}
         <a className="navbar-brand fs-3 d-flex align-items-center fw-bold" href="/">
           <i className="fas fa-graduation-cap me-2 fs-2"></i>EduCommerce AI
         </a>
 
-        {/* Toggle button for mobile */}
         <button
           className="navbar-toggler"
           type="button"
@@ -69,10 +67,8 @@ const Header = () => {
           <span className="navbar-toggler-icon"></span>
         </button>
 
-        {/* Collapsible content */}
         <div className={`collapse navbar-collapse ${!isCollapsed ? 'show' : ''}`} id="navbarContent">
           <div className="d-flex flex-column flex-lg-row justify-content-between align-items-lg-center w-100 gap-3 mt-3 mt-lg-0">
-            {/* Search input */}
             <div className="position-relative w-100 px-2" style={{ maxWidth: '600px' }}>
               <div className="input-group w-100 position-relative" ref={inputRef}>
                 <div className="position-relative w-100">
@@ -97,7 +93,6 @@ const Header = () => {
                   />
                 </div>
 
-                {/* Gợi ý dropdown */}
                 <ul
                   className="list-group position-absolute w-100 mt-2"
                   style={{
@@ -150,7 +145,6 @@ const Header = () => {
               </div>
             </div>
 
-            {/* Button */}
             <div className="d-flex justify-content-center align-items-center gap-2 px-2">
               <button
                 type="button"

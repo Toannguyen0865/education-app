@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import products from '../data';
-import './ProductDetail.css'; // Import your CSS for styling
-
+import './ProductDetail.css'; 
 const ProductDetail = () => {
   const { id } = useParams();
   const navigate = useNavigate();
@@ -36,7 +35,7 @@ const ProductDetail = () => {
   } else {
     updatedFavorites = [...favorites, product];
     setAnimateLike(true);
-    setTimeout(() => setAnimateLike(false), 500); // Reset animation sau 0.5s
+    setTimeout(() => setAnimateLike(false), 500); 
   }
 
   localStorage.setItem('favorites', JSON.stringify(updatedFavorites));
