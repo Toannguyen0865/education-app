@@ -1,0 +1,25 @@
+.suggestion-box {
+  background: white;
+  border: 1px solid #ccc;
+  padding: 12px;
+  border-radius: 8px;
+  width: 250px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  transform: translateY(10px);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  margin-bottom: 10px;
+}
+
+.suggestion-box.show {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.suggestion-box.hide {
+  opacity: 0;
+  transform: translateY(10px);
+  pointer-events: none;
+}
